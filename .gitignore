@@ -1,4 +1,9 @@
+__pycache__/
+.ipynb_checkpoints
+postgres_password.py
 .sass-cache/
 *.css.map
 *.sass.map
 *.scss.map
+
+

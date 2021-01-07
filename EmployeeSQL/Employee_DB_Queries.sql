@@ -72,3 +72,17 @@ FROM employees as p
 GROUP BY p.last_name
 ORDER BY COUNT desc
 ;
+
+--BONUS search my employee #
+SELECT emp.emp_no, emp.first_name, emp.last_name, emp.sex, s.salary, t.title, d.dept_name
+FROM employees AS emp
+JOIN salaries AS s
+	ON emp.emp_no = s.emp_no
+JOIN title AS t
+	ON emp.emp_title_id = t.title_id
+JOIN dept_emp as dp
+	ON dp.emp_no = emp.emp_no
+JOIN departments as d
+	ON dp.dept_no = d.dept_no
+WHERE emp.emp_no = 499942
+;
